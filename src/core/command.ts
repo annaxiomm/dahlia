@@ -8,6 +8,9 @@ export interface Command {
     // User-facing command label
     label: string;
 
+    // Visible in the command palette?
+    palette_visible: boolean;
+
     // The method that runs
     run: () => void | Promise<void>;
 }
@@ -22,6 +25,10 @@ export function registerCommand(cmd: Command) {
 
 export function getCommand(id: string) {
     return commandRegistry.get(id);
+}
+
+export function runCommandFromId(id: string) {
+    commandRegistry.get(id)?.run();
 }
 
 export function listCommands() {

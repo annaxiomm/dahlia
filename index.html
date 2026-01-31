@@ -6,6 +6,7 @@
   <title>dahlia</title>
   <link href="src/styles/main.less" rel="stylesheet" />
   <link href="src/styles/editor.less" rel="stylesheet" />
+  <link href="src/styles/palette.less" rel="stylesheet" />
 </head>
 <body>
 
@@ -16,6 +17,14 @@
     <div id="editor"></div>
     <div id="status-bar">
       <span id="cursor-position">1:1</span>
+    </div>
+  </div>
+
+  <div id="command-palette" class="hidden">
+    <div id="palette-container">
+      <input type="text" id="command-input">
+      <ul id="command-list">
+      </ul>
     </div>
   </div>
 

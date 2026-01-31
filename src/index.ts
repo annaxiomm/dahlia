@@ -1,9 +1,37 @@
 // INDEX.TS
 // "the master script"
 
-import { listCommands, getCommand } from "./core/command";
+import { getCommand, listCommands, runCommandFromId } from "./core/command";
 import "./editor/editor";
 import "./commands/index";
+import { getKeymap } from "./core/keymap";
+import { Platform } from "./core/platform";
 
 console.log(listCommands());
 getCommand("command.test")?.run()
+
+
+// Global keypress listener
+document.body.addEventListener("keypress", (event) => {
+    let id = "";
+    if (Platform.isMac) {
+        if (event.metaKey) {
+            id += "Mod+";
+        }
+    } else {
+        if (event.ctrlKey) {
+            id += "Mod+";
+        }
+    }
+
+    if (event.shiftKey) {
+        id += "Shift+";
+    }
+
+    id += event.key.toLowerCase();
+    if (!getKeymap(id)) {
+        // Keymap not already bound
+    } else {
+        runCommandFromId(getKeymap(id)!.command)
+    }
+})
