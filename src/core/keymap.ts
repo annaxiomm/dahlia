@@ -32,3 +32,10 @@ registerKeymap({
     shift: true,
     command: "core.openpalette"
 })
+
+registerKeymap({
+    key: "s",
+    mod: true,
+    shift: false,
+    command: "editor.save"
+})

@@ -1,7 +1,7 @@
 // COMMAND_PALETTE.TS
 // Code for the command palette to work
 
-import { Command, listCommands, getCommand, runCommandFromId } from "../core/command";
+import { listCommands, getCommand, runCommandFromId } from "../core/command";
 
 const commandPalette = document.getElementById("command-palette");
 const commandEntry = document.getElementById("command-input");
