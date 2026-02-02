@@ -4,8 +4,10 @@
 import { getCommand, listCommands, runCommandFromId } from "./core/command";
 import "./editor/editor";
 import "./commands/index";
+import "./ui/tab_bar";
 import { getKeymap } from "./core/keymap";
 import { Platform } from "./core/platform";
+import { reloadTabs } from "./ui/tab_bar";
 
 console.log(listCommands());
 getCommand("command.test")?.run()
@@ -35,3 +37,5 @@ document.body.addEventListener("keypress", (event) => {
         runCommandFromId(getKeymap(id)!.command)
     }
 })
+
+reloadTabs()

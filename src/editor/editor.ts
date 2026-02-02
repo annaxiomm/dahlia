@@ -25,6 +25,13 @@ bufferList.set("default", {
     hot: true,
 })
 
+bufferList.set("another", {
+    id: "another",
+    filepath: "",
+    contents: "",
+    hot: true
+})
+
 export let currentBuffer = "default";
 
 const updateHandler = EditorView.updateListener.of(update => {
@@ -66,4 +73,8 @@ export function updateBuffers() {
 
 export function getCurrentBuffer() {
     return bufferList.get(currentBuffer);
+}
+
+export function listBuffers() {
+    return Array.from(bufferList.keys())
 }
