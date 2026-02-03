@@ -8,9 +8,25 @@ body, html {
     color: whitesmoke;
 }
 
+@media (max-width: 768px) {
+    .normal {
+        padding-inline: 16px !important;
+    }
+
+    #masthead-buttons {
+        flex-direction: column !important;
+        align-items: center;
+    }
+}
+
+@media (max-width: 500px) {
+    #logo {
+        justify-content: center;
+    }
+}
+
 .normal {
-    padding-left: 200px;
-    padding-right: 200px;
+    padding-inline: 200px;
 }
 
 #header {
@@ -116,12 +132,15 @@ section {
 
 #footer-list {
     text-align: center;
+    margin: 0;
+    padding: 30px;
+    list-style: none;
 }
 
 #footer-list li {
     display: inline;
-    margin: none;
-    padding: none;
+    margin: 0;
+    padding: 0;
 }
 
 #footer-list li a {
@@ -130,4 +149,14 @@ section {
 
 #footer-list li + li::before {
   content: " • ";
+}
+
+#screenshot {
+    display: block;
+    width: max(60vw, 100%);
+}
+
+.screenshot-wrap {
+    display: flex;
+    justify-content: center;
 }
