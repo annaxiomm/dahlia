@@ -3,13 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dahlia</title>
+    <link href="./styles.css" rel="stylesheet" />
+    <link href="./assets/dahlia_logo.png" rel="icon" />
+    <title>dahlia - official site</title>
 </head>
 <body>
-    <div id="container">
-        <header id="header"></header>
-        <main id="main"><h1>Hi!</h1></main>
-        <footer id="footer"></footer>
-    </div>
+    <header id="header" class="normal">
+        <div id="logo">
+            <img src="assets/dahlia_logo.png" id="logoimg" height="100px" />
+            <span id="wordmark">dahlia</span>
+        </div>
+    </header>
+    <section id="masthead">
+        <h1>a modern, experimental code editor</h1>
+        <div id="masthead-buttons">
+            <div class="tooltip">
+                <a class="masthead-button disabled">
+                    Install now
+                </a>
+                <span class="tooltip-text">Dahlia is under heavy development but will hopefully be usable soon!</span>
+            </div>
+            <a class="masthead-button" href="https://github.com/annaxiomm/dahlia" target="_blank">
+                GitHub
+            </a>
+        </div>
+    </section>
+    <section id="features" class="normal">
+        <h1>Features</h1>
+        <ul>
+            <li>Well, not really many at the moment. </li>
+        </ul>
+        <p class="bigger">Dahlia is currently under heavy development, and isn't really usable at the moment. However, we (I) are working hard to turn Dahlia in to a usable editor soon.</p>
+    </section>
+    <section id="faq" class="normal">
+        <h1>FAQ</h1>
+        <span class="bigger"><strong>When will dahlia be ready for use?</strong><br/>
+        It's difficult to tell, but we hope to have the first public version ready before the end of March 2026</span><br/><br/>
+        <span class="bigger"><strong>What are dahlia's goals?</strong><br/>
+        Dahlia aims to blend the minimal nature of terminal-based editors (like NeoVim and Kakoune) with the familiarity of GUI editors (like VSCode or IntelliJ)</span><br/><br/>
+        <span class="bigger"><strong>Does / will dahlia support extensions?</strong><br/>
+        Eventually! We plan to add basic extension support once the actual editor is finished, and then we'll extend from there</span>
+    </section>
+    <footer id="footer">
+        <ul id="footer-list">
+            <li>Made with ❤️ by <a href="https://github.com/annaxiomm" target="_blank">annaxiom</a></li>
+            <li><a href="https://github.com/annaxiomm/dahlia">GitHub</a></li>
+        </ul>
+    </footer>
 </body>
 </html>
