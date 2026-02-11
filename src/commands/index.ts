@@ -1,3 +1,2 @@
-import "./core/palette.ts";
-
-import "./editor/save.ts";
+import "./core.ts";
+import "./editor.ts";

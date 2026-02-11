@@ -1,0 +1,60 @@
+#tab-bar {
+	margin: 0;
+	padding: 0;
+}
+
+#tabs {
+    margin: 0;
+    padding: 0;
+
+    li {
+        display: inline-block;
+    }
+}
+
+.tab {
+	position: relative;          /* anchor for absolute child */
+	display: inline-block;
+
+	padding: 5px 28px 5px 28px;  /* extra right padding for close button */
+	user-select: none;
+	-webkit-user-select: none;
+	cursor: pointer;
+
+	&:hover .close-tab {
+		opacity: 1;
+		pointer-events: auto;
+	}
+}
+
+.close-tab {
+	position: absolute;
+
+	top: 50%;
+	right: 6px;
+	transform: translateY(-50%);
+
+	width: 12px;
+	height: 12px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	border: 1px solid transparent;
+	border-radius: 3px;
+
+	background: lightblue;
+
+	font-size: 10px;
+	font-weight: bolder;
+	line-height: 1;
+
+	opacity: 0;              /* use opacity instead of display */
+	pointer-events: none;    /* prevent ghost clicks */
+	transition: opacity 0.15s ease;
+}
+
+.active {
+    background: red;
+}

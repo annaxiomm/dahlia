@@ -8,28 +8,28 @@ const commandEntry = document.getElementById("command-input");
 const commandList = document.getElementById("command-list");
 
 export function toggleCommandPalette() {
-    reloadCommandPalette();
-    commandPalette?.classList.toggle("hidden");
-    if (!commandPalette?.classList.contains("hidden")) {
-        commandEntry?.focus()
-    }
+	reloadCommandPalette();
+	commandPalette?.classList.toggle("hidden");
+	if (!commandPalette?.classList.contains("hidden")) {
+		commandEntry?.focus();
+	}
 }
 
 function reloadCommandPalette() {
-    commandList!.innerHTML = "";
-    let commands = listCommands();
-    commands.forEach((cmd) => {
-        if (getCommand(cmd)?.palette_visible) {
-            let li = document.createElement("li");
-            let button = document.createElement("button");
+	commandList!.innerHTML = "";
+	let commands = listCommands();
+	commands.forEach((cmd) => {
+		if (getCommand(cmd)?.palette_visible) {
+			let li = document.createElement("li");
+			let button = document.createElement("button");
 
-            button.onclick = () => {
-                runCommandFromId(cmd);
-            }
-            button.innerText = getCommand(cmd)!.label;
-            
-            li.appendChild(button);
-            commandList?.appendChild(li);
-        }
-    });
+			button.onclick = () => {
+				runCommandFromId(cmd);
+			};
+			button.innerText = getCommand(cmd)!.label;
+
+			li.appendChild(button);
+			commandList?.appendChild(li);
+		}
+	});
 }

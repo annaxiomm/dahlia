@@ -1,37 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>dahlia</title>
-  <link href="src/styles/main.less" rel="stylesheet" />
-  <link href="src/styles/editor.less" rel="stylesheet" />
-  <link href="src/styles/palette.less" rel="stylesheet" />
-  <link href="src/styles/tabbar.less" rel="stylesheet" />
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>dahlia</title>
+		<link href="src/styles/main.less" rel="stylesheet" />
+		<link href="src/styles/editor.less" rel="stylesheet" />
+		<link href="src/styles/palette.less" rel="stylesheet" />
+		<link href="src/styles/tab_bar.less" rel="stylesheet" />
+	</head>
+	<body>
+		<div id="container">
+			<div id="tab-bar">
+				<ul id="tabs"></ul>
+			</div>
+			<div id="editor"></div>
+			<div id="status-bar">
+				<span id="cursor-position">1:1</span>
+			</div>
+		</div>
 
-  <div id="container">
-    <div id="tab-bar">
-      <ul id="tabs">
+		<div id="command-palette" class="hidden">
+			<div id="palette-container">
+				<input type="text" id="command-input" />
+				<ul id="command-list"></ul>
+			</div>
+		</div>
 
-      </ul>
-    </div>
-    <div id="editor"></div>
-    <div id="status-bar">
-      <span id="cursor-position">1:1</span>
-    </div>
-  </div>
-
-  <div id="command-palette" class="hidden">
-    <div id="palette-container">
-      <input type="text" id="command-input">
-      <ul id="command-list">
-      </ul>
-    </div>
-  </div>
-
-  <!-- THE MASTER SCRIPT -->
-  <script src="src/index.ts" type="module"></script>
-</body>
+		<!-- THE MASTER SCRIPT -->
+		<script src="src/index.ts" type="module"></script>
+	</body>
 </html>

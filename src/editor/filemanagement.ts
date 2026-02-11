@@ -4,13 +4,13 @@
 import { getCurrentBuffer } from "./editor";
 
 export function saveCurrentBuffer() {
-    const currentBuffer = getCurrentBuffer()!;
+	const currentBuffer = getCurrentBuffer()!;
 
-    if (!currentBuffer.hot) {
-        console.log("buffer is already saved, no need to save again");
-        return;
-    }
+	if (!currentBuffer.hot) {
+		console.log("buffer is already saved, no need to save again");
+		return;
+	}
 
-    console.log(currentBuffer);
-    currentBuffer.hot = false;
+	console.log(currentBuffer);
+	currentBuffer.hot = false;
 }
