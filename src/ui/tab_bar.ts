@@ -1,9 +1,9 @@
 import {
 	currentBuffer,
-	getCurrentBuffer,
 	listBuffers,
 	setCurrentBuffer,
 	deleteBuffer,
+	getBuffer,
 } from "../editor/editor";
 
 const tabBar = document.getElementById("tabs")!;
@@ -31,7 +31,14 @@ export function reloadTabs() {
 		button.addEventListener("click", () => {
 			switchBuffer(value);
 		});
-		button.innerText = value;
+
+		const buf = getBuffer(value)!;
+
+		if (buf.filepath == "") {
+			button.innerText = "untitled";
+		} else {
+			button.innerText = buf.filepath;
+		}
 
 		button.appendChild(close);
 

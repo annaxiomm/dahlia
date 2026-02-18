@@ -1,2 +1,2 @@
-import "./core.ts";
+import "./dahlia.ts";
 import "./editor.ts";

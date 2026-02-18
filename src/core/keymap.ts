@@ -30,7 +30,7 @@ registerKeymap({
 	key: "p",
 	mod: true,
 	shift: true,
-	command: "core.openpalette",
+	command: "dahlia.openpalette",
 });
 
 registerKeymap({
@@ -45,4 +45,11 @@ registerKeymap({
 	mod: true,
 	shift: false,
 	command: "editor.newfile",
+});
+
+registerKeymap({
+	key: "n",
+	mod: true,
+	shift: false,
+	command: "dahlia.quit",
 });

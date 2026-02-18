@@ -67,6 +67,10 @@ export function createBuffer(filepath: string, contents: string) {
 	reloadTabs();
 }
 
+export function getBuffer(id: string) {
+	return bufferList.get(id);
+}
+
 export function deleteBuffer(id: string) {
 	const wasCurrent = id === currentBuffer;
 

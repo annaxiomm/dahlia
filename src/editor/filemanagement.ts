@@ -11,6 +11,16 @@ export function saveCurrentBuffer() {
 		return;
 	}
 
+	if (currentBuffer.filepath != "") {
+		saveCurrentBufferAs();
+	}
+
 	console.log(currentBuffer);
 	currentBuffer.hot = false;
+}
+
+export function saveCurrentBufferAs() {
+	const currentBuffer = getCurrentBuffer();
+	console.log(currentBuffer);
+	console.log("saving as");
 }
